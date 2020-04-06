@@ -1,0 +1,61 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{04/24/2020 Fri }
+\begin{document}
+\maketitle 
+
+\part{3.1}
+\begin{description}
+    \item[5]Describe an algorithm that takes as input a list of n integers in nondecreasing order and produces the list of all values that occur more than once. (Recall that a list of integers is nondecreasing if each integer in the list is at least as large as the previous integer in the list.) \\\\
+        \hspace*{0cm}       \textbf{procedure} \emph{duplicates}($a_1,a_2,\cdots,a_n$:\textbf{integers in nondecreasing order})  \\
+        \hspace*{0cm}        $cnt:=0$                                                 \\
+        \hspace*{0cm}        $j:=2$                                                 \\
+        \hspace*{0cm}        \textbf{while} $j<=n$                                  \\
+        \hspace*{1cm}            \textbf{if} $a_j=a_{j-1}$  \textbf{then}               \\
+        \hspace*{2cm}                $cnt:=cnt+1$                                           \\
+        \hspace*{2cm}                $b_{cnt}:=a_j$                                         \\
+        \hspace*{2cm}                \textbf{while} $j<=n$ and $a_j =b_{cnt}$               \\
+        \hspace*{3cm}                    $j:=j+1$                                       \\
+        \hspace*{1cm}            $j:=j+1$                                           \\
+        \hspace*{0cm}        $\{b_1,b_2,\cdots,b_{cnt}\}$ is the desired list.          \\
+
+\item[15]Describe an algorithm that inserts an integer x in the appropriate position into the list a1, a2,...,an of integers that are in increasing order \\\\
+
+    \hspace*{0cm}    \textbf{procedure} insert( $a_1,a_2,\cdots,a_n$: integers in increasing order,$x$ )             \\
+    \hspace*{0cm}    $a_{n+1}:=x$                                                                                 \\
+    \hspace*{0cm}    $i:=n+1$                                                                                \\
+    \hspace*{0cm}    \textbf{while} $a_{i-1}>a_i$                                                                          \\
+    \hspace*{1cm}    $swap(a_i,a_{i-1)$                                                                               \\
+    \hspace*{1cm}    $i:=i-1$                                                                               \\
+    \hspace*{0cm}    \{x has been inserted into the correct position\}                                       \\
+
+
+\item[27]The ternary search algorithm locates an element in a list of increasing integers by successively splitting the list into three sublists of equal (or as close to equal as possible) size, and restricting the search to the appropriate piece.  Specify the steps of this algorithm \\\\
+
+    \hspace*{0cm} \textbf{procedure} ternary search(s: integer, $a_1,a_2,...,a_n$: increasing integers)            \\
+    \hspace*{0cm} $i:=1$                                                                             \\
+    \hspace*{0cm} $j:=n$                                                                             \\
+    \hspace*{0cm} \textbf{while} $i<j-1$                                                                      \\
+    \hspace*{1cm} $l:=\lfloor \frac{(i+j)}{3} \rfloor$                                                               \\
+    \hspace*{1cm} $r:=\lfloor \frac{2(i+j)}{3} \rfloor$                                                               \\
+    \hspace*{1cm} \textbf{if} $x>a_r$ \textbf{then} $i:=r+1$                                                            \\
+    \hspace*{1cm} \textbf{else if} $x>a_l$ \textbf{then}                                                                  \\
+    \hspace*{2cm} $i:=l+1$                                                                         \\
+    \hspace*{2cm} $j:=r$                                                                             \\
+    \hspace*{1cm} \textbf{else} $j:=l$                                                                        \\
+    \hspace*{0cm} \textbf{if} $x=a_i$ \textbf{then} $loc:=i$                                                       \\
+    \hspace*{0cm} \textbf{else} if $x=a_j$ \textbf{then} $loc:=j$                                                  \\
+    \hspace*{0cm} \textbf{else} loc := -1                                                                 \\
+    \hspace*{0cm} \textbf{return} loc \{-1 if not found\}                                                   \\
+
+\end{description}
+
+\end{document}

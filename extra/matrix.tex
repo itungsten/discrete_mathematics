@@ -1,0 +1,33 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{05/06/2020 Wed }
+\begin{document}
+\maketitle 
+
+\part{Extra Homework}
+\begin{description}
+    \item[1]Matrix Multiplication Algorithm\\\\
+
+        \hspace*{1cm}        \textbf{procedure} matrixMultiplicatoin($A_{m \times n} ,B_{n \times p}$)           \\
+        \hspace*{1cm}        make space for $C_{m \times p}$                                                     \\
+        \hspace*{1cm}        \textbf{for} i:=1 to m                                                              \\
+        \hspace*{2cm}            \textbf{for} j:=1 to p                                                          \\
+        \hspace*{3cm}            $C_{i,j}$ :=0                                                                    \\
+        \hspace*{1cm}        \textbf{for} i:=1 to m                                                              \\
+        \hspace*{2cm}            \textbf{for} j:=1 to p                                                          \\
+        \hspace*{3cm}                \textbf{for} k:=1 to n                                                       \\
+        \hspace*{4cm}                $C_{i,j}$:=$C_{i,j}$+$A_{i,k} \times B_{k,j}$                               \\
+        \hspace*{1cm}        \textbf{return} C;                                                                  \\
+
+        
+\end{description}
+
+\end{document}

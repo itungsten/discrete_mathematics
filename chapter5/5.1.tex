@@ -1,0 +1,40 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{05/05/2020 Tue }
+\begin{document}
+\maketitle 
+
+\part{5.1}
+\begin{description}
+    \item[5]Prove that 
+        $$1^2 + 3^2 + 5^2 + \cdots + (2n + 1)^2 = \frac{(n + 1)(2n + 1)(2n + 3)}{3}$$ 
+\quad \quad whenever $n$ is a nonnegative integer \\\\
+        Let $P(n)$ to be 
+        $$1^2 + 3^2 + 5^2 + \cdots + (2n + 1)^2 = \frac{(n + 1)(2n + 1)(2n + 3)}{3}$$ 
+        Basis Step: In terms of $P(0)$, $1^2=\frac{(0+1)(0+1)(0+3)}{3}=1$ is True \\\\
+        Inductive Step:Assum $P(k-1)$ is True, now we prove $P(k)$ is True \\
+$$1^2 + 3^2 + 5^2 + \cdots + (2k + 1)^2 =1^2 + 3^2 + 5^2 + \cdots + (2k-1)^2+ (2k + 1)^2 = \frac{k(2k - 1)(2k + 1)}{3}+(2k+1)^2$$  \\
+        Meanwhile, we have \quad $$\frac{k(2k - 1)(2k + 1)}{3}+(2k+1)^2=\frac{(2k^2+5k+3)(2k + 1)}{3}=\frac{(k + 1)(2k + 1)(2k + 3)}{3}$$\\
+        which implies $P(k)$ is True. \\
+        So, in the end, we have 
+                $$1^2 + 3^2 + 5^2 + \cdots + (2k + 1)^2 = \frac{(k + 1)(2k + 1)(2k + 3)}{3}$$ 
+        as desired. \\
+
+    \item[51]What is wrong with this "proof"? 
+    "Theorem":For every positive integer n, if x and y are positive integers with $max(x, y)$ = n, then x = y.  
+    Basis Step: Suppose that n = 1. If $max(x, y)$ = 1 and x and y are positive integers, we have x = 1 and y = 1. 
+    Inductive Step: Let k be a positive integer. Assume that whenever $max(x, y)$ = k and x and y are positive integers, then x = y. Now let max(x, y) = k + 1, where x and y are positive integers. Then $max(x-1, y-1)$ = k, so by the inductive hypothesis, $x-1$ = $y-1$. It follows that x = y, completing the inductive step. \\\\
+
+    The mistake is in the Inductive Step. When we have x,y to be positive, we cannot say $x-1,y-1$ is also positive.
+
+\end{description}
+
+\end{document}

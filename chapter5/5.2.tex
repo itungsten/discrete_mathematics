@@ -1,0 +1,39 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{05/05/2020 Tue }
+\begin{document}
+\maketitle 
+
+\part{5.2}
+\begin{description}
+    \item[7]Which amounts of money can be formed using just twodollar bills and five-dollar bills? Prove your answer using strong induction. \\\\
+Answer: $N_+ \setminus \{1,3\}$  \\\\
+Let $P(n)$ to be $n=2a+5b$, when $a,b \in N$ \\
+Basis Step: \\
+$P(2)$ : 2=2 \\
+$P(4)$ : 4=2*2 \\
+$P(5)$ : 5=5 \\
+Inductive Step: \\
+Assum the inductive hypothesis that $P(j)$ is True , $\forall \;4 \leq j < k$ \\
+Then $k=k-2+2$, which means $k=2\times a+ 5\times b +2$ ,then $k=2 \times (a+1) + 5 \times b$, so the $P(k)$ is also True.\\
+So we prove it as we desired.
+
+
+
+    \item[27]Show that if the statement $P(n)$ is true for infinitely many positive integers $n$ and $P(n+1)\to P(n)$ is true for all positive integers $n$, then $P(n)$ is true for all positive integers $n$. \\\\
+    Prove:\\
+    I'd like to prove it by using contradiction. \\
+    Firstly, we assum $\exists N$, $P(N)$ is False. We can claim that there is no such number M which is greater than N, and $P(M)$ to be True. If we have this number, according to $P(n+1)\to P(n)$, we will have $P(N)$ to be True, so there is no number which is greater than N and is True for $P(x)$.  \\
+    So, furthermore, the statistics of number which is True for $P(x)$ is no greater than N, and it conficts with the infinite assumption.\\
+    In the end, according to the contradiction, we get $P(N)$ to be True arbitrarily, as we desired.
+\end{description}
+
+\end{document}

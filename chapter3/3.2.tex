@@ -1,0 +1,39 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{04/24/2020 Fri }
+\begin{document}
+\maketitle 
+
+\part{3.2}
+\begin{description}
+    \item[1]Determine whether each of these functions is O(x). \\\\
+        a) True   \quad C=1,k=10       \\
+        b) True   \quad C=4,k=7      \\
+        c) False        \\
+        d) True   \quad C=5,k=1      \\
+        e) True   \quad C=1,k=0      \\
+        f) True   \quad C=1,k=1      \\
+    \item[9]Show that $f(x)=x^2 + 4x + 17$ is $O(x^3)$,but that $x^3$ is not $O(x^2 + 4x + 17)$  \\\\
+        $x^2+4x+17 \leq 3x^3$, for all $x>17$, so $x^2+4x+17$ is $O(x^3)$, known that C=3, k=17. However, if $x^3$ were $O(x^2+4x+17)$, then there exists some C that $x^3 \leq C(x^2+4x+17) \leq 3Cx^2$, for sufficiently large x, which means $x \leq 3C$ for all large x, it is ridiculous. Then, $x^3$ is not $O(x2 + 4x + 17)$.
+        \item[17]Suppose that $f(x)$, $g(x)$, and $h(x)$ are functions such that $f(x)$ is $O(g(x))$ and $g(x)$ is $O(h(x))$. Show that $f(x)$ is $O(h(x))$ \\\\
+        Firstly, we have $\forall c_1>0$, \; $\exists a \; large \; X_1$. when $x>X_1$,  $f(x)<=c_1g(x)$  \\
+        Secondly,we have $\forall c_2>0$,\; $\exists a \; large \; X_2$. when $x>X_2$,  $g(x)<=c_2h(x)$  \\
+        Thirdly, $\forall c>0$, we make it into $c_1 \times c_2$.  \\
+        Finally, we have $\forall c>0$, $\exists a\; large \;X=max(X_1,X_2)$. when $x>X$,  $f(x)<=c_1g(x)<=c_1 \times c_2 h(x)=c\times h(x)$  \\
+        So, $f(x)$ is $O(h(x))$, as we desired.
+\item[37]Explain what it means for a function to be $\Theta(1)$ \\\\
+    From my perspective, it is a combination of $O(1)$ and $\Omega(1)$. \\
+    Mathematically, it means $\exists c_1, c_2$, and $c_1 \leq f(n) \leq c_2$     \\
+    Intuitively, it just like the squeeze theorem, by using it, we can describe a function in a more precise way with its upper bound and lower bound.       
+
+\end{description}
+
+\end{document}

@@ -1,0 +1,87 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{04/24/2020 Fri }
+\begin{document}
+\maketitle 
+
+\part{2.6}
+\begin{description}
+    \item[15] Let
+        \begin{equation} A=
+            \left[
+                \begin{array}{cc}
+                    1 & 1 \\
+                    0 & 1 \\
+                \end{array}
+            \right]
+        \end{equation} Find a formula for $A^n$, whenever n is a positive integer.\\\\
+        \begin{equation}
+            A^{n}=
+            \left[
+                \begin{array}{cc}
+                    1 & n\\
+                    0 & 1\\
+                \end{array}
+            \right]
+        \end{equation}
+        \item[29]Let
+		\begin{equation}
+            A=
+			\left[
+			\begin{array}{ccc}
+			1 & 0 & 0\\
+			1 & 0 & 1\\
+			0 & 1 & 0
+			\end{array}
+			\right]
+		\end{equation}
+		Find\\
+		a) $A^{[2]}$\\
+		b) $A^{[3]}$\\
+		c) $A\lor A^{[2]}\lor A^{[3]}$\\\\
+		a) 
+		\begin{equation}
+		A^{[2]}=
+		\left[
+		\begin{array}{ccc}
+		1 & 0 & 0\\
+		1 & 1 & 0\\
+		1 & 0 & 1
+		\end{array}
+		\right]
+		\end{equation}
+		b) 
+		\begin{equation}
+		A^{[3]}=
+		\left[
+		\begin{array}{ccc}
+		1 & 0 & 0\\
+		1 & 0 & 1\\
+		1 & 1 & 0
+		\end{array}
+		\right]
+		\end{equation}
+		c) 
+		\begin{equation}
+		A\lor A^{[2]}\lor A^{[3]}=
+		\left[
+		\begin{array}{ccc}
+		1 & 0 & 0\\
+		1 & 1 & 1\\
+		1 & 1 & 1
+		\end{array}
+		\right]
+		\end{equation}
+        
+
+\end{description}
+
+\end{document}

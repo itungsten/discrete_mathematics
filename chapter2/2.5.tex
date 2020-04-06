@@ -1,0 +1,58 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{04/24/2020 Fri }
+\begin{document}
+\maketitle 
+
+\part{2.5}
+\begin{description}
+    \item[1]. Determine whether each of these sets is finite, countably infinite, or uncountable. For those that are countably infinite, exhibit a one-to-one correspondence between the set of positive integers and that set. \\\\
+        a) countably infinite   $-1,-2,-3,-4,\cdots$   \quad  in another words $f(n)=-n$ \\
+        b) countably infinite   $-2,2,-4,4,-6,6,\cdots$    \\
+        i.e.\[
+            f(x)=\begin{cases} -(n+1) \quad n\ is\ odd \\
+            n \quad n\ is\ even 
+            \end{cases}
+        .\] 
+
+        c) countably infinite, $99, 98, 97,\cdots$\\
+        d) uncountable\\
+        e) finite \\
+        f) countably infinite \\
+        \[
+        f(x)= \begin{cases}
+            7n \quad n \ is \ odd  \\
+            -7 \times \frac{n}{2} \quad n \  is \ even
+        \end{cases}
+        .\] 
+
+    \item[11]Give an example of two uncountable sets A and B such that $A\cap B$ is \\\\ 
+        a) A=$(-1,0]$ B=$[0,1)$  \quad (finite)  \\    
+        b) A=  $N \cup (0,1)$ B=$N \cup (1,2)$   \quad (countably infinite)\\
+        c) A= $(0,1)$ B=$(0,1)$ \quad (uncountable)\\
+
+    \item[19]Show that if A, B, C, and D are sets with |A|=|B| and |C|=|D|, then |A × C|=|B × D|. \\\\
+
+        In terms of finite sets:  \\
+        \hspace*{1cm}    $|{A \times B}| = |{A}| \times |{B}|$ \\
+        \hspace*{1cm}    $|{C \times D}| = |{C}| \times |{D}|$ \\
+        \hspace*{1cm}    we have \quad $|{A}| = |{B}$ \quad $|{C}|= |{D}|$ \\
+        \hspace*{1cm}    so \quad $|{A \times B}|=|{C \times D}|$  \\\\
+        In terms of all kinds of sets: \\
+        \hspace*{1cm}   We are given bijections f from A to B and g from C to D. Then the function from to that sends to is a bijection   \\
+
+
+
+        
+        
+\end{description}
+
+\end{document}

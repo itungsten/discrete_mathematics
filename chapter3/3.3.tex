@@ -1,0 +1,53 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{04/24/2020 Fri }
+\begin{document}
+\maketitle 
+
+\part{3.3}
+\begin{description}
+    \item[3]Give a $O$ estimate for the number of operations,
+where an operation is a comparison or a multiplication,
+used in this segment of an algorithm(ignoring comparisons used to test the conditions in the for loops, where
+a1, a2, ..., an are positive real numbers). \\\\
+$O{(n^2)}$ \\
+    \item[7]Suppose that an element is known to be among the first four elements in a list of 32 elements. Would a linear search or a binary search locate this element more rapidly \\\\
+        \textbf{linear} search
+    \item[11]
+        a)Suppose we have n subsets S1, S2,...,Sn of the set {1, 2,...,n}. Express a brute-force algorithm that determines whether there is a disjoint pair of these subsets  \\\\
+\hspace*{1cm}    \textbf{procedure} disjointpair($S_1, S_2,\cdots,S_n$ : subsets of $\{1,2,\cdots,n\}$)  \\
+\hspace*{1cm}    \textbf{for} i := 1 to n   \\
+\hspace*{2cm}       \textbf{for} j := i+1 to n  \\
+\hspace*{3cm}            m:=1 \\
+\hspace*{3cm}            \textbf{for} k :=1 to n  \\
+\hspace*{4cm}                \textbf{if}( $k \notin S1 \;\land \; k \notin S2$), \textbf{then}  \\
+\hspace*{5cm}                    m:=0   \\
+\hspace*{5cm}                    \textbf{break}   \\
+\hspace*{3cm}            if(m=1)   \\
+\hspace*{4cm}                \textbf{return} True   \\
+\hspace*{1cm}    \textbf{return} False   \\\\
+
+        b)Give a big-O estimate for the number of times the algorithm needs to determine whether an integer is in one of the subsets. \\\\
+        $O{(n^3)}$ \\
+        \item[15]What is the largest n for which one can solve within one
+second a problem using an algorithm that requires f (n)
+bit operations, where each bit operation is carried out in
+10−9 seconds, with these functions f (n)?  \\\\
+a) $2^{10^{9}}$                                  \\
+b) $10^{9}$                                      \\
+c) $3.96\times 10^7$\\
+d) $\lfloor 10^{4.5} \rfloor$  \quad  i.e. \; 31622            \\
+e) $9\times log_2(10)$  \quad  i.e. \; 29                     \\
+f)  12                                           \\
+        
+\end{description}
+
+\end{document}

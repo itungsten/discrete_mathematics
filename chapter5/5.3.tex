@@ -1,0 +1,67 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{05/05/2020 Tue }
+\begin{document}
+\maketitle 
+
+\part{5.3}
+\begin{description}
+    \item[29]Give a recursive definition of each of these sets of ordered pairs of positive integers. Use structural induction to prove that the recursive definition you found is correct. \\\\
+        a)\\
+        \textbf{Definition}:\\
+        Basis Step:$(1,1) \in S$  \\
+        Recursive Step:if $(x,y)\in S$ ,then $(x+1,y+1),(x+2,y),(x,y+2) \in S$  \\
+
+
+        \textbf{Proof}: \\ 
+        Assum the proper set to be U.\\
+        $S \subset U$ \\
+        the origin sum of $(x,y)$ is 2, and the extended sum is always two greater than the before one. So all the sum of $(x,y)$ is even, and $S \subset U $. \\\\
+        $U \subset S$  \\
+        $\forall \;(x,y) \in U$ whose sum is $2k+2$, $k \geq 0$. \\
+        If x is even and y is even, we can substract x or y by 2 to make x=y. \\
+        Similarly, it the same with x is odd and y is odd. And there is no other case. \\
+        When x=y, we can substract x and y by 1, until x=y=1. \\
+        So, we find a path from (1,1) to an arbitrary (x,y), so $U \subset S$. \\\\
+        Then  $U=S$ , as we desired. \\\\
+
+        b)\\
+        \textbf{Definition}:\\
+        Basis Step:$(1,1),(1,2),(2,1) \in S$  \\
+        Recursive Step:if $(x,y)\in S$ ,then $(x+2,y),(x,y+2) \in S$  \\\\
+
+        \textbf{Proof}: \\ 
+        Assum the proper set to be U.\\
+        $S \subset U$ \\
+         It really obvious that (1,1),(1,2) and (2,1) all have an odd coordinate at least. So all the derived $(x,y)$ have at least an odd coordinate. \\\\
+        $U \subset S$ \\
+         Conversely, while x>2 x-=2, while y>2 y-=2. After these steps, (a,b) can transformed into the basis (1,1),(1,2),(2,1), and they are in S.\\
+        So, we find a path from the origins to (x,y), so $U \subset S$. \\\\
+        Then  $U=S$ , as we desired. \\\\
+
+        c)\\
+        \textbf{Definition}:\\
+        Basis Step:$(1,6),(2,3) \in S$  \\
+        Recursive Step: If $(x,y)\in S$, then $(x+2,y)\in S$ and $(x,y+6)\in S$.\\
+
+        \textbf{Proof}: \\ 
+        Assum the proper set to be U.\\
+        $S \subset U$ \\
+        3|6 and 1+6=7 is odd, 3|3 and 2+3=5 is odd. If (x,y) is in S, then (x+2,b) and (x,y+6) which are supposed to be in S, are also in U.\\\\
+        $U \subset S$ \\
+        While x>2 x:=x-2, while y>6 y:=y-6. At last you will fall into (2,3) or (1,6).\\
+
+        So, we find a path from the origins to (x,y), so $U \subset S$. \\\\
+        Then  $U=S$ , as we desired. \\\\
+
+\end{description}
+
+\end{document}
