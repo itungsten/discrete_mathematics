@@ -1,0 +1,38 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{05/28/2020 Thu }
+\begin{document}
+\maketitle
+
+\part{9.5}
+\begin{description}
+    \item[15]. Let $R$ be the relation on the set of ordered pairs of positive integers such that $((a, b),(c, d))\in R$ if and only if $a+d=b+c$. Show that $R$ is an equivalence relation.
+
+        Firstly, in terms of the reflexivity, $\forall (a,b)$ we have $((a,b),(a,b)) \in R$ because $a+b=b+a$                                                            \\  \\
+        Secondly, in terms of the symmetry, $\forall ((a,b),(c,d)) \in R$ we have $((c,d),(a,b)) \in R$ because $a+d=b+c \Leftrightarrow c+b=d+a$                        \\  \\
+        Thridly, in terms of the transitivity, $\forall ((a,b),(c,d))\; , ((c,d),(e,f)) \in R$ we have $((a,b),(e,f)) \in R$ because $a+d=b+c \land c+f=d+e \to a+f=b+e$ \\  \\
+        Finally, we can conclude that $R$ is an equivalence relation.                                                                                                    \\  \\
+
+    \item[35]What is the congruence class $[n]_5$ (that is, the equivalence class of n with respect to congruence modulo 5) when n is \\
+
+            a) 2  \\
+            b) 3  \\
+            c) 6  \\
+            d) −3 \\
+
+        
+            a) $\{ x| x=2+5k \; k \in Z   \}$  i.e. $\{ \cdots,-3,2,7,\cdots \}$\\
+            b) $\{ x| x=3+5k \; k \in Z   \}$  i.e. $\{ \cdots,-2,3,8,\cdots \}$\\
+            c) $\{ x| x=6+5k \; k \in Z   \}$  i.e. $\{ \cdots,1,6,11,\cdots \}$\\
+            d) $\{ x| x=-3+5k \; k \in Z   \}$  i.e. $\{ \cdots,-8,-3,2,\cdots \}$\\
+\end{description}
+
+\end{document}

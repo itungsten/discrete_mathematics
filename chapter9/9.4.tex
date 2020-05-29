@@ -1,0 +1,35 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{05/28/2020 Thu }
+\begin{document}
+\maketitle
+
+\part{9.4}
+\begin{description}
+    \item[13]Suppose that the relation $R$ on the finite set $A$ is represented by the matrix $M_R$. Show that the matrix that represents the symmetric closure of $R$ is $M_R \lor M^t_R$. \\
+        
+        Firstly $S(R)=R \cup R^{-1}$, so $M_{S(R)}=M_R \lor M_{R^{-1}}$   \\
+        Additionally, we have $M_{R^{-1}}=M^t_R$ .   \\
+        Finally ,we can prove that $S(R)$ is $M_R \lor M^t_R$. \\
+
+
+    \item[29]Find the smallest relation containing the relation {(1, 2), (1, 4), (3, 3), (4, 1)} that is  \\
+        a) reflexive and transitive.           \\
+        b) symmetric and transitive.           \\
+        c) reflexive, symmetric, and transitive\\
+
+        a) \{(1, 1), (1, 2), (1, 4), (2, 2), (3, 3), (4, 1), (4, 2), (4, 4)\}                 \\
+        b) \{(1, 1), (1, 2), (1, 4), (2, 1), (2, 2), (2, 4), (3, 3), (4, 1), (4, 2), (4, 4)\} \\
+        c) \{(1, 1), (1, 2), (1, 4), (2, 1), (2, 2), (2, 4), (3, 3), (4, 1), (4, 2), (4, 4)\} \\
+
+\end{description}
+
+\end{document}

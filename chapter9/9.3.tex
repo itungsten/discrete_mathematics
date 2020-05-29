@@ -1,0 +1,57 @@
+%! Tex program = xelatex
+\documentclass[UTF8]{article}
+\usepackage{indentfirst}
+\usepackage{graphicx} 
+\usepackage{amsmath}  
+\usepackage{float}   
+\usepackage{listings}
+
+\title{Discrete Mathematics}
+\author{Zhengren Wang 2019081308021}
+\date{05/28/2020 Thu }
+\begin{document}
+\maketitle 
+
+\part{9.3}
+\begin{description}
+    \item[13]Let $R$ be the relation represented by the matrix 
+        $$
+        M_R = 
+        \begin{bmatrix}
+            0 & 1 & 1   \\
+            1 & 1 & 0   \\
+            1 & 0 & 1   \\
+        \end{bmatrix}
+        $$
+        Find the matrix representing a) $R^{-1}$ b) $\bar{R}$ c) $R^2$   \\
+        a)
+        $$
+        \begin{bmatrix}
+            0 & 1 & 1   \\
+            1 & 1 & 0   \\
+            1 & 0 & 1   \\
+        \end{bmatrix}
+        $$
+        b)
+        $$
+        \begin{bmatrix}
+            1 & 0 & 0   \\
+            0 & 0 & 1   \\
+            0 & 1 & 0   \\
+        \end{bmatrix}
+        $$
+        c)
+        $$
+        \begin{bmatrix}
+            1 & 1 & 1   \\
+            1 & 1 & 1   \\
+            1 & 1 & 1   \\
+        \end{bmatrix}
+        $$
+
+    \item[33]Let $R$ be a relation on a set A. Explain how to use the directed graph representing $R$ to obtain the directed graph representing the inverse relation $R^{-1}$.  \\
+        Just reverse all the edges, to be more specific, $\forall (u,v)$ we reverse it into $(v,u) $.
+
+\end{description}
+
+\end{document}
